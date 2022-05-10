@@ -1,0 +1,16 @@
+http 통신 : 브라우저에서 localhost:3000을 요청하고 express서버에서 get('/')을 돌려주면 화면출력
+
+소켓사용 - socket을 통한 양방향 연결  
+>>>> 패킷으로 주고받는것이 아닌 이벤트 발생시때마다 주고받음 - send()이벤트)
+>>>> 브라우저측에서 disconnect 이벤트 실행시에 끊어짐
+
+- io를 통한 소켓연결 (이벤트 실행으로 연결)
+- www의 socket.on("connection")안의 함수 실행 
+
+
+www파일 
+
+- app.js파일
+
+-- router폴더 (각 url에 따른 http 메소드와 함수)
+-- 모듈

@@ -1,0 +1,23 @@
+https://ninjaggobugi.tistory.com/9?category=979943 (node에 관한 전체적 설명)
+
+<통합프로젝트 확인>
+-vue create frontend ------------------(router,linter) history(y) save(n)
+
+-npm install axios
+
+-vue.config.js 생성
+
+-express backend --no-view --------------------- express 프레임워크를 적용한 backend 폴더생성 (no view로 view는 생성x)
+
+- backend 파일로 들어가 npm install 로 module설치
+
+- frontend 파일로 들어가 npm run build 로 백엔드에 빌드
+
+(처음 서버 열때에는 SET DEBUG=backend:* & npm start 로서 실행후에 node ./bin/www 문구 사용가능)
+(터미널 로그 지우는 문구는 cls)
+
+- 경로등 설정
+
+-백엔드에 npm install connect-history-api-fallback 으로 설치
+ (history 사용시 서버의 잘못된 주소로 이동을 해도 vue에서 자동처리를 해줌)
+

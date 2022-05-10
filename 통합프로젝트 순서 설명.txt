@@ -1,0 +1,34 @@
+<순서도>
+
+
+1. app.js에서 routes의 memo.js를 memoRouter로 함
+2. app.use('/api/memo')로서 memoRouter를 사용
+
+-----------------------------------------------------------------------------------------
+about 을 라우터 링크로 이동시 
+
+1. created로서 한번 $http.get(/api/memo')가 실행.
+
+2. 이때 memo.js에서 request를 기다리던 router.get('/'~~ 이 실행되고
+   response로 json파일을 들고온 memos를 뱉어줌
+
+3. 그럼 다시 돌아와서 .then으로 response 값을 기다리던게 
+   뱉어준 memos값을 response로 받고 그 안의 data값을 this.memo (data)에 넣어줌
+
+4. 그리고 그것을 화면에 출력
+
+----------------------------------------------------------------------------------------
+about안의 라우터 링크 클릭해 이동시
+
+1. created로서 한번 $http.get(/api/memo/${this.$route.params.id}')가 실행.
+  (이때 라우터링크로 :to 연결해준 주소는 v-for문의 i의 id값인데
+   그것을 ${this.$route.params.id}로 침)
+
+2. 이때 memo.js에서 request를 기다리던 router.get('/:id'~~ 이 실행되고
+   response로 filter로서 memos의 id 값과 request로 들어온 현 주소의 파람 id값이
+   같은 객체를 response.send 뱉어줌
+
+3. 3. 그럼 다시 돌아와서 .then으로 response 값을 기다리던게 
+   뱉어준 memos값을 response로 받고 그 안의 data값을 this.memo (data)에 넣어줌
+
+4. 그리고 그 객체안의 title과 memo값을 화면에 출력

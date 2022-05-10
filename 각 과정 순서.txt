@@ -1,0 +1,19 @@
+[1].memolist
+
+=   (f)app.vue > (f)index.js > (f)memolist.vue > (b)app.js 
+
+     > (b)apimemo.js > memo.json > (f)memolist.vue (get)
+------------------------------------------------------------------------------------------------
+[2].writeform.vue
+
+=   (f)app.vue > (f)index.js > (f)writeform.vue > (addmemo)
+    
+     > (b)app.js > (b)apimemo.js 
+------------------------------------------------------------------------------------------------
+[3].pageview
+
+=   (f)memolist.vue > (router.pusth '/list/${memo.id})
+ 
+     > (f)index.js > (f)pageview.vue > (b)app.js
+
+     > (b)apimemo.js > (/:id)
